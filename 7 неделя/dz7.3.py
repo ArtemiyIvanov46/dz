@@ -1,3 +1,4 @@
+#я не знаю почему оно не работает
 from random import randint
 from math import *
 
@@ -10,26 +11,37 @@ class Star():
     Содержит массу, координаты, скорость звезды,
     а также визуальный радиус звезды в пикселах и её цвет.
     """
+
     type = "star"
     """Признак объекта звезды"""
+
     m = 0
     """Масса звезды"""
+
     x = 0
     """Координата по оси **x**"""
+
     y = 0
     """Координата по оси **y**"""
+
     Vx = 0
     """Скорость по оси **x**"""
+
     Vy = 0
     """Скорость по оси **y**"""
+
     Fx = 0
     """Сила по оси **x**"""
+
     Fy = 0
     """Сила по оси **y**"""
+
     R = 5
     """Радиус звезды"""
+
     color = "red"
     """Цвет звезды"""
+
     image = None
     """Изображение звезды"""
 
@@ -39,26 +51,37 @@ class Planet():
     Содержит массу, координаты, скорость планеты,
     а также визуальный радиус планеты в пикселах и её цвет
     """
+
     type = "planet"
     """Признак объекта планеты"""
+
     m = 0
     """Масса планеты"""
+
     x = 0
     """Координата по оси **x**"""
+
     y = 0
     """Координата по оси **y**"""
+
     Vx = 0
     """Скорость по оси **x**"""
+
     Vy = 0
     """Скорость по оси **y**"""
+
     Fx = 0
     """Сила по оси **x**"""
+
     Fy = 0
     """Сила по оси **y**"""
+
     R = 5
     """Радиус планеты"""
+
     color = "green"
     """Цвет планеты"""
+
     image = None
     """Изображение планеты"""
 
@@ -68,21 +91,19 @@ w = alpha = 0
 
 def calculate_force(body, space_objects):
     """Вычисляет силу, действующую на тело.
+
     Параметры:
+
     **body** — тело, для которого нужно вычислить дейстующую силу.
+
     **space_objects** — список объектов, которые воздействуют на тело.
     """
     global w
     global alpha
+
     body.Fx = body.Fy = 0
     for obj in space_objects:
-        if body != obj:
-            body.Fx += (gravitational_constant * body.m * obj.m * (obj.x - body.x) / (
-                        ((obj.x - body.x) ** 2 + (obj.y - body.y) ** 2) ** 0.5)) / (
-                                   (obj.x - body.x) ** 2 + (obj.y - body.y) ** 2)
-            body.Fy += (gravitational_constant * body.m * obj.m * (obj.y - body.y) / (
-                        ((obj.x - body.x) ** 2 + (obj.y - body.y) ** 2) ** 0.5)) / (
-                                   (obj.x - body.x) ** 2 + (obj.y - body.y) ** 2)
+        if body == obj:
             if (body.x ** 2 + body.y ** 2) == 0:
                 w = 0
             else:
@@ -94,24 +115,40 @@ tiiime = 1
 
 def move_space_object(body, dt):
     """Перемещает тело в соответствии с действующей на него силой.
+
     Параметры:
+
     **body** — тело, которое нужно переместить.
     """
-    ax = body.Fx / body.m
-    body.Vx += ax * dt
-    body.x += body.Vx * dt
-    ay = body.Fy / body.m
-    body.y += body.Vy * dt
-    body.Vy += ay * dt
+    try:
+        body.Fy = (((6.67 * 10 ** (-11)) * body.m * 1.99 * 10 ** (30)) / (body.x ** 2 + body.y ** 2)) * sin(
+            (w * dt) % (pi * 2))
+        body.Fx = -((((6.67 * 10 ** (-11) * body.m * 1.99 * 10 ** (30)) / (
+                    body.x ** 2 + body.y ** 2)) ** 2) - body.Fy ** 2) ** 0.5
+        ax = body.Fx / body.m
+        body.Vx += ax * dt
+        body.x += body.Vx * dt
+        ay = body.Fy / body.m
+        body.y += body.Vy * dt
+        body.Vy += ay * dt
+        print(body.Fx)
+    except ZeroDivisionError:
+        body.Fx = 0
+        body.Fy = 0
+
     '''zhitь ( ͡ಥ ͜ʖ ͡ಥ)'''
 
 
 def recalculate_space_objects_positions(space_objects, dt):
     """Пересчитывает координаты объектов.
+
     Параметры:
+
     **space_objects** — список оьъектов, для которых нужно пересчитать координаты.
+
     **dt** — шаг по времени
     """
+
     for body in space_objects:
         calculate_force(body, space_objects)
     for body in space_objects:
@@ -120,15 +157,21 @@ def recalculate_space_objects_positions(space_objects, dt):
 
 if __name__ == "__main__":
     print("This module is not for direct call!")
+
 header_font = "Arial-16"
 """Шрифт в заголовке"""
+
 window_width = 800
 """Ширина окна"""
+
 window_height = 600
 """Высота окна"""
+
 scale_factor = None
 """Масштабирование экранных координат по отношению к физическим.
+
 Тип: float
+
 Мера: количество пикселей на один метр."""
 
 
@@ -144,9 +187,12 @@ def scale_x(x):
     Принимает вещественное число, возвращает целое число.
     В случае выхода **x** координаты за пределы экрана возвращает
     координату, лежащую за пределами холста.
+
     Параметры:
+
     **x** — x-координата модели.
     """
+
     return int(x * scale_factor) + window_width // 2
 
 
@@ -156,18 +202,25 @@ def scale_y(y):
     В случае выхода **y** координаты за пределы экрана возвращает
     координату, лежащую за пределами холста.
     Направление оси развёрнуто, чтобы у модели ось **y** смотрела вверх.
+
     Параметры:
+
     **y** — y-координата модели.
     """
+
     return int(-y * scale_factor) + window_height // 2
 
 
 def create_star_image(space, star):
     """Создаёт отображаемый объект звезды.
+
     Параметры:
+
     **space** — холст для рисования.
+
     **star** — объект звезды.
     """
+
     x = scale_x(star.x)
     y = scale_y(star.y)
     r = star.R
@@ -176,10 +229,14 @@ def create_star_image(space, star):
 
 def create_planet_image(space, planet):
     """Создаёт отображаемый объект планеты.
+
     Параметры:
+
     **space** — холст для рисования.
+
     **planet** — объект планеты.
     """
+
     x = scale_x(planet.x)
     y = scale_y(planet.y)
     r = planet.R
@@ -189,8 +246,11 @@ def create_planet_image(space, planet):
 def update_system_name(space, system_name):
     """Создаёт на холсте текст с названием системы небесных тел.
     Если текст уже был, обновляет его содержание.
+
     Параметры:
+
     **space** — холст для рисования.
+
     **system_name** — название системы тел.
     """
     space.create_text(30, 80, tag="header", text=system_name, font=header_font)
@@ -198,8 +258,11 @@ def update_system_name(space, system_name):
 
 def update_object_position(space, body):
     """Перемещает отображаемый объект на холсте.
+
     Параметры:
+
     **space** — холст для рисования.
+
     **body** — тело, которое нужно переместить.
     """
     x = scale_x(body.x)
@@ -220,14 +283,18 @@ if __name__ == "__main__":
 def read_space_objects_data_from_file(input_filename):
     """Cчитывает данные о космических объектах из файла, создаёт сами объекты
     и вызывает создание их графических образов
+
     Параметры:
+
     **input_filename** — имя входного файла
     """
+
     objects = []
     with open(input_filename) as input_file:
         for line in input_file:
             if len(line.strip()) == 0 or line[0] == '#':
                 continue  # пустые строки и строки-комментарии пропускаем
+
             object_type = line.split()[0].lower()
             if object_type == "star":
                 star = Star()
@@ -239,20 +306,30 @@ def read_space_objects_data_from_file(input_filename):
                 objects.append(planet)
             else:
                 print("Unknown space object")
+
     return objects
 
 
 def parse_star_parameters(line, star):
     """Считывает данные о звезде из строки.
+
     Входная строка должна иметь слеюущий формат:
+
     Star <радиус в пикселах> <цвет> <масса> <x> <y> <Vx> <Vy>
+
     Здесь (x, y) — координаты зведы, (Vx, Vy) — скорость.
+
     Пример строки:
+
     Star 10 red 1000 1 2 3 4
+
     Параметры:
+
     **line** — строка с описание звезды.
+
     **star** — объект звезды.
     """
+
     tokens = line.split()
     assert (tokens[0].lower() == 'star')
     assert (len(tokens) == 8)
@@ -268,12 +345,19 @@ def parse_star_parameters(line, star):
 def parse_planet_parameters(line, planet):
     """Считывает данные о планете из строки.
     Входная строка должна иметь следующий формат:
+
     Planet <радиус в пикселах> <цвет> <масса> <x> <y> <Vx> <Vy>
+
     Здесь (x, y) — координаты планеты, (Vx, Vy) — скорость.
+
     Пример строки:
+
     Planet 10 red 1000 1 2 3 4
+
     Параметры:
+
     **line** — строка с описание планеты.
+
     **planet** — объект планеты.
     """
     tokens = line.split()
@@ -290,11 +374,17 @@ def parse_planet_parameters(line, planet):
 
 def write_space_objects_data_to_file(output_filename, space_objects):
     """Сохраняет данные о космических объектах в файл.
+
     Строки должны иметь следующий формат:
+
     Star <радиус в пикселах> <цвет> <масса> <x> <y> <Vx> <Vy>
+
     Planet <радиус в пикселах> <цвет> <масса> <x> <y> <Vx> <Vy>
+
     Параметры:
+
     **output_filename** — имя входного файла
+
     **space_objects** — список объектов планет и звёзд
     """
     with open(output_filename, 'w') as out_file:
@@ -304,6 +394,7 @@ def write_space_objects_data_to_file(output_filename, space_objects):
 
 if __name__ == "__main__":
     print("This module is not for direct call!")
+
 import tkinter
 from tkinter.filedialog import *
 
@@ -311,17 +402,23 @@ from tkinter.filedialog import *
 # from solar_visuals import *
 # from solar_physics import *
 # from solar_read import *
+
+
 perform_execution = False
 """Флаг цикличности выполнения расчёта"""
+
 physical_time = 0
 """Физическое время от начала расчёта.
 Тип: float"""
+
 displayed_time = None
 """Отображаемое на экране время.
 Тип: переменная tkinter"""
+
 time_step = None
 """Шаг по времени при моделировании.
 Тип: float"""
+
 space_objects = []
 """Список космических объектов."""
 
@@ -339,6 +436,7 @@ def execution():
         update_object_position(space, body)
     physical_time += time_step.get()
     displayed_time.set("%.1f" % physical_time + " seconds gone")
+
     if perform_execution:
         space.after(101 - int(time_speed.get()), execution)
 
@@ -351,6 +449,7 @@ def start_execution():
     perform_execution = True
     start_button['text'] = "Pause"
     start_button['command'] = stop_execution
+
     execution()
     print('Started execution...')
 
@@ -380,6 +479,7 @@ def open_file_dialog():
     space_objects = read_space_objects_data_from_file(in_filename)
     max_distance = max([max(abs(obj.x), abs(obj.y)) for obj in space_objects])
     calculate_scale_factor(max_distance)
+
     for obj in space_objects:
         if isinstance(obj, Star):
             create_star_image(space, obj)
@@ -408,8 +508,10 @@ def main():
     global time_speed
     global space
     global start_button
+
     print('Modelling started!')
     physical_time = 0
+
     root = tkinter.Tk()
     # космическое пространство отображается на холсте типа Canvas
     space = tkinter.Canvas(root, width=window_width, height=window_height, bg="black")
@@ -417,23 +519,29 @@ def main():
     # нижняя панель с кнопками
     frame = tkinter.Frame(root)
     frame.pack(side=tkinter.BOTTOM)
+
     start_button = tkinter.Button(frame, text="Start", command=start_execution, width=6)
     start_button.pack(side=tkinter.LEFT)
+
     time_step = tkinter.DoubleVar()
     time_step.set(1)
     time_step_entry = tkinter.Entry(frame, textvariable=time_step)
     time_step_entry.pack(side=tkinter.LEFT)
+
     time_speed = tkinter.DoubleVar()
     scale = tkinter.Scale(frame, variable=time_speed, orient=tkinter.HORIZONTAL)
     scale.pack(side=tkinter.LEFT)
+
     load_file_button = tkinter.Button(frame, text="Open file...", command=open_file_dialog)
     load_file_button.pack(side=tkinter.LEFT)
     save_file_button = tkinter.Button(frame, text="Save to file...", command=save_file_dialog)
     save_file_button.pack(side=tkinter.LEFT)
+
     displayed_time = tkinter.StringVar()
     displayed_time.set(str(physical_time) + " seconds gone")
     time_label = tkinter.Label(frame, textvariable=displayed_time, width=30)
     time_label.pack(side=tkinter.RIGHT)
+
     root.mainloop()
     print('Modelling finished!')
 
