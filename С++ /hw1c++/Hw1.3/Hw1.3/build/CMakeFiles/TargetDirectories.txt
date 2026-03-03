@@ -1,3 +1,0 @@
-/Users/rootadmin/Desktop/Информатика/С++ /Hw1.3/Hw1.3/build/CMakeFiles/MyProject.dir
-/Users/rootadmin/Desktop/Информатика/С++ /Hw1.3/Hw1.3/build/CMakeFiles/edit_cache.dir
-/Users/rootadmin/Desktop/Информатика/С++ /Hw1.3/Hw1.3/build/CMakeFiles/rebuild_cache.dir
