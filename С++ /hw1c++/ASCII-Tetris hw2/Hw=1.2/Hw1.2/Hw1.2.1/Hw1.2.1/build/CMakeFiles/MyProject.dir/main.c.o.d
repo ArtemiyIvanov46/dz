@@ -1,5 +1,5 @@
 CMakeFiles/MyProject.dir/main.c.o: \
-  /Users/rootadmin/Desktop/Информатика/С++\ /ASCII-Tetris\ hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/main.c \
+  /Users/rootadmin/Desktop/Информатика/С++\ /hw1c++/ASCII-Tetris\ hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/main.c \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_bounds.h \
@@ -85,4 +85,4 @@ CMakeFiles/MyProject.dir/main.c.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_abort.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_dev_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_mode_t.h \
-  /Users/rootadmin/Desktop/Информатика/С++\ /ASCII-Tetris\ hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/tetris.h
+  /Users/rootadmin/Desktop/Информатика/С++\ /hw1c++/ASCII-Tetris\ hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/tetris.h

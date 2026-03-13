@@ -53,10 +53,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/rootadmin/Desktop/Информатика/С++ /ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1"
+CMAKE_SOURCE_DIR = "/Users/rootadmin/Desktop/Информатика/С++ /hw1c++/ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/rootadmin/Desktop/Информатика/С++ /ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/build"
+CMAKE_BINARY_DIR = "/Users/rootadmin/Desktop/Информатика/С++ /hw1c++/ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/MyProject.dir/depend.make
@@ -73,32 +73,32 @@ CMakeFiles/MyProject.dir/codegen:
 .PHONY : CMakeFiles/MyProject.dir/codegen
 
 CMakeFiles/MyProject.dir/main.c.o: CMakeFiles/MyProject.dir/flags.make
-CMakeFiles/MyProject.dir/main.c.o: /Users/rootadmin/Desktop/Информатика/С++\ /ASCII-Tetris\ hw2/Hw$(EQUALS)1.2/Hw1.2/Hw1.2.1/Hw1.2.1/main.c
+CMakeFiles/MyProject.dir/main.c.o: /Users/rootadmin/Desktop/Информатика/С++\ /hw1c++/ASCII-Tetris\ hw2/Hw$(EQUALS)1.2/Hw1.2/Hw1.2.1/Hw1.2.1/main.c
 CMakeFiles/MyProject.dir/main.c.o: CMakeFiles/MyProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rootadmin/Desktop/Информатика/С++ /ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/MyProject.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MyProject.dir/main.c.o -MF CMakeFiles/MyProject.dir/main.c.o.d -o CMakeFiles/MyProject.dir/main.c.o -c "/Users/rootadmin/Desktop/Информатика/С++ /ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/main.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rootadmin/Desktop/Информатика/С++ /hw1c++/ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/MyProject.dir/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MyProject.dir/main.c.o -MF CMakeFiles/MyProject.dir/main.c.o.d -o CMakeFiles/MyProject.dir/main.c.o -c "/Users/rootadmin/Desktop/Информатика/С++ /hw1c++/ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/main.c"
 
 CMakeFiles/MyProject.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/MyProject.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/rootadmin/Desktop/Информатика/С++ /ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/main.c" > CMakeFiles/MyProject.dir/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/rootadmin/Desktop/Информатика/С++ /hw1c++/ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/main.c" > CMakeFiles/MyProject.dir/main.c.i
 
 CMakeFiles/MyProject.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/MyProject.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/rootadmin/Desktop/Информатика/С++ /ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/main.c" -o CMakeFiles/MyProject.dir/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/rootadmin/Desktop/Информатика/С++ /hw1c++/ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/main.c" -o CMakeFiles/MyProject.dir/main.c.s
 
 CMakeFiles/MyProject.dir/tetris.c.o: CMakeFiles/MyProject.dir/flags.make
-CMakeFiles/MyProject.dir/tetris.c.o: /Users/rootadmin/Desktop/Информатика/С++\ /ASCII-Tetris\ hw2/Hw$(EQUALS)1.2/Hw1.2/Hw1.2.1/Hw1.2.1/tetris.c
+CMakeFiles/MyProject.dir/tetris.c.o: /Users/rootadmin/Desktop/Информатика/С++\ /hw1c++/ASCII-Tetris\ hw2/Hw$(EQUALS)1.2/Hw1.2/Hw1.2.1/Hw1.2.1/tetris.c
 CMakeFiles/MyProject.dir/tetris.c.o: CMakeFiles/MyProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rootadmin/Desktop/Информатика/С++ /ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/MyProject.dir/tetris.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MyProject.dir/tetris.c.o -MF CMakeFiles/MyProject.dir/tetris.c.o.d -o CMakeFiles/MyProject.dir/tetris.c.o -c "/Users/rootadmin/Desktop/Информатика/С++ /ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/tetris.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rootadmin/Desktop/Информатика/С++ /hw1c++/ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/MyProject.dir/tetris.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MyProject.dir/tetris.c.o -MF CMakeFiles/MyProject.dir/tetris.c.o.d -o CMakeFiles/MyProject.dir/tetris.c.o -c "/Users/rootadmin/Desktop/Информатика/С++ /hw1c++/ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/tetris.c"
 
 CMakeFiles/MyProject.dir/tetris.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/MyProject.dir/tetris.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/rootadmin/Desktop/Информатика/С++ /ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/tetris.c" > CMakeFiles/MyProject.dir/tetris.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/rootadmin/Desktop/Информатика/С++ /hw1c++/ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/tetris.c" > CMakeFiles/MyProject.dir/tetris.c.i
 
 CMakeFiles/MyProject.dir/tetris.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/MyProject.dir/tetris.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/rootadmin/Desktop/Информатика/С++ /ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/tetris.c" -o CMakeFiles/MyProject.dir/tetris.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/rootadmin/Desktop/Информатика/С++ /hw1c++/ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/tetris.c" -o CMakeFiles/MyProject.dir/tetris.c.s
 
 # Object files for target MyProject
 MyProject_OBJECTS = \
@@ -112,7 +112,7 @@ MyProject: CMakeFiles/MyProject.dir/main.c.o
 MyProject: CMakeFiles/MyProject.dir/tetris.c.o
 MyProject: CMakeFiles/MyProject.dir/build.make
 MyProject: CMakeFiles/MyProject.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/rootadmin/Desktop/Информатика/С++ /ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable MyProject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/rootadmin/Desktop/Информатика/С++ /hw1c++/ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable MyProject"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MyProject.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -124,6 +124,6 @@ CMakeFiles/MyProject.dir/clean:
 .PHONY : CMakeFiles/MyProject.dir/clean
 
 CMakeFiles/MyProject.dir/depend:
-	cd "/Users/rootadmin/Desktop/Информатика/С++ /ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/rootadmin/Desktop/Информатика/С++ /ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1" "/Users/rootadmin/Desktop/Информатика/С++ /ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1" "/Users/rootadmin/Desktop/Информатика/С++ /ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/build" "/Users/rootadmin/Desktop/Информатика/С++ /ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/build" "/Users/rootadmin/Desktop/Информатика/С++ /ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/build/CMakeFiles/MyProject.dir/DependInfo.cmake" "--color=$(COLOR)" MyProject
+	cd "/Users/rootadmin/Desktop/Информатика/С++ /hw1c++/ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/rootadmin/Desktop/Информатика/С++ /hw1c++/ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1" "/Users/rootadmin/Desktop/Информатика/С++ /hw1c++/ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1" "/Users/rootadmin/Desktop/Информатика/С++ /hw1c++/ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/build" "/Users/rootadmin/Desktop/Информатика/С++ /hw1c++/ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/build" "/Users/rootadmin/Desktop/Информатика/С++ /hw1c++/ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/build/CMakeFiles/MyProject.dir/DependInfo.cmake" "--color=$(COLOR)" MyProject
 .PHONY : CMakeFiles/MyProject.dir/depend
 

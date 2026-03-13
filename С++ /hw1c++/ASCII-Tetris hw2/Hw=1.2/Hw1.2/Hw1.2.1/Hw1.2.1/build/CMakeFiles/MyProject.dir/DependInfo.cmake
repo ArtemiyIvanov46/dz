@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/rootadmin/Desktop/Информатика/С++ /ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/main.c" "CMakeFiles/MyProject.dir/main.c.o" "gcc" "CMakeFiles/MyProject.dir/main.c.o.d"
-  "/Users/rootadmin/Desktop/Информатика/С++ /ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/tetris.c" "CMakeFiles/MyProject.dir/tetris.c.o" "gcc" "CMakeFiles/MyProject.dir/tetris.c.o.d"
+  "/Users/rootadmin/Desktop/Информатика/С++ /hw1c++/ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/main.c" "CMakeFiles/MyProject.dir/main.c.o" "gcc" "CMakeFiles/MyProject.dir/main.c.o.d"
+  "/Users/rootadmin/Desktop/Информатика/С++ /hw1c++/ASCII-Tetris hw2/Hw=1.2/Hw1.2/Hw1.2.1/Hw1.2.1/tetris.c" "CMakeFiles/MyProject.dir/tetris.c.o" "gcc" "CMakeFiles/MyProject.dir/tetris.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

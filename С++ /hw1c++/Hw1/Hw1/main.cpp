@@ -1,5 +1,5 @@
 #include <iostream>
-#include "calculator.h"
+#include "utils/calculator.h"
 
 int main() {
     std::cout << "Main program" << std::endl;
