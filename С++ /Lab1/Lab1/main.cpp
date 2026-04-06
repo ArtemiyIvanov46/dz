@@ -372,7 +372,7 @@ public:
         other.m_size = 0;
     }
     //очищение
-    void clear() {
+    void clear() noexcept {
         if (head == nullptr) return;
         Node* current = head->next[0];
         while (current != nullptr) {
