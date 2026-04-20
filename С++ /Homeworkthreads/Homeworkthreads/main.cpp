@@ -1,6 +1,9 @@
+#include <chrono>
 #include <future>
 #include <iostream>
+#include <optional>
 #include <stdexcept>
+#include <thread>
 #include <vector>
 #include <iterator>
 
@@ -107,22 +110,98 @@ auto map_reduce_thread(It begin, It end, F1 f1, F2 f2, int num) {
     return res;
 }
 
+template <typename It, typename F1, typename F2>
 
+auto map_reduce_thread_strided(It begin, It end, F1 f1, F2 f2, int num) {
+    if (begin == end) {
+        throw std::invalid_argument("пустой список");
+    }
+    if (num <= 0) {
+        throw std::invalid_argument("слишком мало потоков");
+    }
+    auto len = std::distance(begin, end);
+    if (num > len) {
+        num = static_cast<int>(len);
+    }
+    using Result = decltype(f1(*begin));
+    std::vector<std::thread> threads;
+    std::vector<std::optional<Result>> partial(num);
+    threads.reserve(num);
+    for (int t = 0; t < num; ++t) {
+        threads.emplace_back([=, &partial]() {
+            bool first = true;
+            Result local{};
+            for (decltype(len) i = t; i < len; i += num) {
+                auto value = f1(*(begin + i));
+                if (first) {
+                    local = value;
+                    first = false;
+                } else {
+                    local = f2(local, value);
+                }
+            }
+            if (!first) {
+                partial[t] = local;
+            }
+        });
+    }
+    for (auto& th : threads) {
+        th.join();
+    }
+    int first_filled = 0;
+    while (first_filled < num && !partial[first_filled].has_value()) {
+        ++first_filled;
+    }
+    if (first_filled == num) {
+        throw std::runtime_error("не удалось вычислить результат");
+    }
+    Result res = *partial[first_filled];
+    for (int i = first_filled + 1; i < num; ++i) {
+        if (partial[i].has_value()) {
+            res = f2(res, *partial[i]);
+        }
+    }
+    return res;
+}
 
 int main() {
-    std::vector<int> v{1, 2, 3, 4};
+    std::vector<int> v1{1, 2, 3, 4};
 
     auto res = map_reduce_parallel(
-        v.begin(), v.end(),
+        v1.begin(), v1.end(),
         [](int x) { return x * 2; },
         [](int a, int b) { return a + b; },
         2
     );
-    auto res2 = map_reduce_parallel(
-        v.cbegin(), v.cend(),
+    auto res22 = map_reduce_thread(
+        v1.cbegin(), v1.cend(),
         [](int x) { return x * 2; },
         [](int a, int b) { return a + b; },
         2
     );
-    std::cout << res << '\n' << res2 << '\n'; // 20
+    std::cout << res << '\n' << res22 << '\n'; // 20
+    
+    
+    const int n = 10'000'000;
+    const int num_threads = 4;
+    std::vector<int> v(n);
+
+    for (int i = 0; i < n; ++i) {
+            v[i] = i + 1;
+        }
+    auto f1 = [](int x) { return static_cast<long long>(x) * x; };
+    auto f2 = [](long long a, long long b) { return a + b; };
+    
+    auto t1_start = std::chrono::steady_clock::now();
+    auto res1 = map_reduce_thread(v.begin(), v.end(), f1, f2, num_threads);
+    auto t1_end = std::chrono::steady_clock::now();
+    
+    auto t2_start = std::chrono::steady_clock::now();
+    auto res2 = map_reduce_thread_strided(v.begin(), v.end(), f1, f2, num_threads);
+    auto t2_end = std::chrono::steady_clock::now();
+    
+    auto ms1 = std::chrono::duration_cast<std::chrono::milliseconds>(t1_end - t1_start).count();//порядка 16 миллисекунд
+    auto ms2 = std::chrono::duration_cast<std::chrono::milliseconds>(t2_end - t2_start).count();//поряда 25 миллисекунд, ответы одинаковые
+    std::cout << "Разбиение по диапазонам: " << res1 << ", time = " << ms1 << " ms\n";
+    std::cout << "Чередование индексов:   " << res2 << ", time = " << ms2 << " ms\n";
 }
