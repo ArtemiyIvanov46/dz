@@ -1,0 +1,111 @@
+Start testing: Apr 28 01:10 MSK
+----------------------------------------------------------
+1/4 Testing: ThreadsafeQueueTest.SinglePushSinglePopWorks
+1/4 Test: ThreadsafeQueueTest.SinglePushSinglePopWorks
+Command: "/Users/rootadmin/Desktop/Информатика/С++ /Homeworkthreads/mainqueue/build/hello_test" "--gtest_filter=ThreadsafeQueueTest.SinglePushSinglePopWorks" "--gtest_also_run_disabled_tests"
+Directory: /Users/rootadmin/Desktop/Информатика/С++ /Homeworkthreads/mainqueue/build
+"ThreadsafeQueueTest.SinglePushSinglePopWorks" start time: Apr 28 01:10 MSK
+Output:
+----------------------------------------------------------
+Running main() from /Users/rootadmin/Desktop/Информатика/С++ /Homeworkthreads/mainqueue/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = ThreadsafeQueueTest.SinglePushSinglePopWorks
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ThreadsafeQueueTest
+[ RUN      ] ThreadsafeQueueTest.SinglePushSinglePopWorks
+[       OK ] ThreadsafeQueueTest.SinglePushSinglePopWorks (0 ms)
+[----------] 1 test from ThreadsafeQueueTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"ThreadsafeQueueTest.SinglePushSinglePopWorks" end time: Apr 28 01:10 MSK
+"ThreadsafeQueueTest.SinglePushSinglePopWorks" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/4 Testing: ThreadsafeQueueTest.QueueWithCapacityOnePreservesOrder
+2/4 Test: ThreadsafeQueueTest.QueueWithCapacityOnePreservesOrder
+Command: "/Users/rootadmin/Desktop/Информатика/С++ /Homeworkthreads/mainqueue/build/hello_test" "--gtest_filter=ThreadsafeQueueTest.QueueWithCapacityOnePreservesOrder" "--gtest_also_run_disabled_tests"
+Directory: /Users/rootadmin/Desktop/Информатика/С++ /Homeworkthreads/mainqueue/build
+"ThreadsafeQueueTest.QueueWithCapacityOnePreservesOrder" start time: Apr 28 01:10 MSK
+Output:
+----------------------------------------------------------
+Running main() from /Users/rootadmin/Desktop/Информатика/С++ /Homeworkthreads/mainqueue/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = ThreadsafeQueueTest.QueueWithCapacityOnePreservesOrder
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ThreadsafeQueueTest
+[ RUN      ] ThreadsafeQueueTest.QueueWithCapacityOnePreservesOrder
+[       OK ] ThreadsafeQueueTest.QueueWithCapacityOnePreservesOrder (2 ms)
+[----------] 1 test from ThreadsafeQueueTest (2 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (2 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"ThreadsafeQueueTest.QueueWithCapacityOnePreservesOrder" end time: Apr 28 01:10 MSK
+"ThreadsafeQueueTest.QueueWithCapacityOnePreservesOrder" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/4 Testing: ThreadsafeQueueTest.PushedValuesArePoppedInSameOrder
+3/4 Test: ThreadsafeQueueTest.PushedValuesArePoppedInSameOrder
+Command: "/Users/rootadmin/Desktop/Информатика/С++ /Homeworkthreads/mainqueue/build/hello_test" "--gtest_filter=ThreadsafeQueueTest.PushedValuesArePoppedInSameOrder" "--gtest_also_run_disabled_tests"
+Directory: /Users/rootadmin/Desktop/Информатика/С++ /Homeworkthreads/mainqueue/build
+"ThreadsafeQueueTest.PushedValuesArePoppedInSameOrder" start time: Apr 28 01:10 MSK
+Output:
+----------------------------------------------------------
+Running main() from /Users/rootadmin/Desktop/Информатика/С++ /Homeworkthreads/mainqueue/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = ThreadsafeQueueTest.PushedValuesArePoppedInSameOrder
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ThreadsafeQueueTest
+[ RUN      ] ThreadsafeQueueTest.PushedValuesArePoppedInSameOrder
+[       OK ] ThreadsafeQueueTest.PushedValuesArePoppedInSameOrder (5 ms)
+[----------] 1 test from ThreadsafeQueueTest (5 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (5 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"ThreadsafeQueueTest.PushedValuesArePoppedInSameOrder" end time: Apr 28 01:10 MSK
+"ThreadsafeQueueTest.PushedValuesArePoppedInSameOrder" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/4 Testing: ThreadsafeQueueTest.ManyProducersOneConsumerShouldNotLoseTasks
+4/4 Test: ThreadsafeQueueTest.ManyProducersOneConsumerShouldNotLoseTasks
+Command: "/Users/rootadmin/Desktop/Информатика/С++ /Homeworkthreads/mainqueue/build/hello_test" "--gtest_filter=ThreadsafeQueueTest.ManyProducersOneConsumerShouldNotLoseTasks" "--gtest_also_run_disabled_tests"
+Directory: /Users/rootadmin/Desktop/Информатика/С++ /Homeworkthreads/mainqueue/build
+"ThreadsafeQueueTest.ManyProducersOneConsumerShouldNotLoseTasks" start time: Apr 28 01:10 MSK
+Output:
+----------------------------------------------------------
+Running main() from /Users/rootadmin/Desktop/Информатика/С++ /Homeworkthreads/mainqueue/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = ThreadsafeQueueTest.ManyProducersOneConsumerShouldNotLoseTasks
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ThreadsafeQueueTest
+[ RUN      ] ThreadsafeQueueTest.ManyProducersOneConsumerShouldNotLoseTasks
+[       OK ] ThreadsafeQueueTest.ManyProducersOneConsumerShouldNotLoseTasks (1275 ms)
+[----------] 1 test from ThreadsafeQueueTest (1275 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1275 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   1.28 sec
+----------------------------------------------------------
+Test Passed.
+"ThreadsafeQueueTest.ManyProducersOneConsumerShouldNotLoseTasks" end time: Apr 28 01:10 MSK
+"ThreadsafeQueueTest.ManyProducersOneConsumerShouldNotLoseTasks" time elapsed: 00:00:01
+----------------------------------------------------------
+
+End testing: Apr 28 01:10 MSK

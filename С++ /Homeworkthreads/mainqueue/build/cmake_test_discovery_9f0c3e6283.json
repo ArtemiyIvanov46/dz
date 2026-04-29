@@ -1,0 +1,32 @@
+{
+  "tests": 4,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "ThreadsafeQueueTest",
+      "tests": 4,
+      "testsuite": [
+        {
+          "name": "SinglePushSinglePopWorks",
+          "file": "\/Users\/rootadmin\/Desktop\/\u00D0\u0098\u00D0\u00BD\u00D1\u0084\u00D0\u00BE\u00D1\u0080\u00D0\u00BC\u00D0\u00B0\u00D1\u0082\u00D0\u00B8\u00D0\u00BA\u00D0\u00B0\/\u00D0\u00A1++ \/Homeworkthreads\/mainqueue\/testnew.cpp",
+          "line": 13
+        },
+        {
+          "name": "QueueWithCapacityOnePreservesOrder",
+          "file": "\/Users\/rootadmin\/Desktop\/\u00D0\u0098\u00D0\u00BD\u00D1\u0084\u00D0\u00BE\u00D1\u0080\u00D0\u00BC\u00D0\u00B0\u00D1\u0082\u00D0\u00B8\u00D0\u00BA\u00D0\u00B0\/\u00D0\u00A1++ \/Homeworkthreads\/mainqueue\/testnew.cpp",
+          "line": 24
+        },
+        {
+          "name": "PushedValuesArePoppedInSameOrder",
+          "file": "\/Users\/rootadmin\/Desktop\/\u00D0\u0098\u00D0\u00BD\u00D1\u0084\u00D0\u00BE\u00D1\u0080\u00D0\u00BC\u00D0\u00B0\u00D1\u0082\u00D0\u00B8\u00D0\u00BA\u00D0\u00B0\/\u00D0\u00A1++ \/Homeworkthreads\/mainqueue\/testnew.cpp",
+          "line": 52
+        },
+        {
+          "name": "ManyProducersOneConsumerShouldNotLoseTasks",
+          "file": "\/Users\/rootadmin\/Desktop\/\u00D0\u0098\u00D0\u00BD\u00D1\u0084\u00D0\u00BE\u00D1\u0080\u00D0\u00BC\u00D0\u00B0\u00D1\u0082\u00D0\u00B8\u00D0\u00BA\u00D0\u00B0\/\u00D0\u00A1++ \/Homeworkthreads\/mainqueue\/testnew.cpp",
+          "line": 84
+        }
+      ]
+    }
+  ]
+}
